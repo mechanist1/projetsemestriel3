@@ -105,6 +105,17 @@ const AuthForm = () => {
             label="Password" 
             type="password"
           />
+          {variant === 'REGISTER' && (
+            <Input
+              disabled={isLoading}
+              register={register}
+              errors={errors}
+              required
+              id="verify password" 
+              label="Verify Password"
+              type="password"
+            />
+          )}
           <div>
             <Button disabled={isLoading} fullWidth type="submit">
               {variant === 'LOGIN' ? 'Sign in' : 'Register'}
